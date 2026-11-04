@@ -4,22 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ngariung</title>
-  <link rel="stylesheet" crossorigin href="/ngariung/didieu/assets/index-C06tH5yW.css">
+  <link rel="stylesheet" crossorigin href="/ngariung/didieu/assets/index-BnQS3l8-.css">
 </head>
 <body class="bg-gray-100 min-h-screen">
-
+Week 44 | Week 45 | Week 46
     <div class="container mx-auto p-8">
         <h1 class="text-4xl font-bold text-blue-600">
-            Hello, Ngariung!
+            Diriung!
         </h1>
 
         <p class="mt-4 text-gray-700">
-            Tailwind CSS v4 is working.
+            Mempersoalkan "JOIN" pada SQL
         </p>
+        <p class="text-gray-000 text-xs">
+            Week 45
+        </p>
+        <br/>
+        <p>Saya pribadi sempat merasa bingung mengapa JOIN ini dibutuhkan; 'toh dengan cara menyaring query melalui klausa WHERE yang bertumpuk kita tetap dapat menerima baris data yang tersedia.</p>
+        <br/>
+        <p>Salah satu cara menjelaskannya adalah menimbang keberadaan value NULL. Pada praktiknya, tetep aja tim akan berpotensi mendapati baris kosong -bukan hanya karena user yang tidak tertib, melainkan dikarenakan proses development itu sendiri. Jika NULL tidak dipikirkan, ia berpotensi mengacaukan data yang tampil kepada Front-End.</p>
+        <br/>
+        <p>Tapi ya sudahlah, <i>hayu urang</i> coba aja.</p>
 
-        <button class="mt-6 rounded-lg bg-blue-600 px-5 py-2 text-white hover:bg-blue-700">
+        <ol class="list-decimal list-inside pl-4 space-y-2">
+        	<li class="items-center p-4 bg-white shadow rounded-lg border-l-4 border-yellow-500">Masuklah kepada mysql melalui shell/terminal</li>
+        	<li class="items-center p-4 bg-white shadow rounded-lg border-l-4 border-yellow-500">Buatlah database dengan nama latihan_join_amhar Sesuaikan dengan nama panggilan.</li>
+        	<li class="items-center p-4 bg-white shadow rounded-lg border-l-4 border-yellow-500">Ciptakan table dengan nama tabel "murid" (id, nama).</li>
+        	<li class="items-center p-4 bg-white shadow rounded-lg border-l-4 border-yellow-500">Masukkan beberapa murid ke tabel murid. Pastikan terdapat value NULL bagi sebuah kolom</li>
+        	<li class="items-center p-4 bg-white shadow rounded-lg border-l-4 border-yellow-500">Ciptakan table dengan nama tabel "kelas" (id & nama_kelas)</li>
+        	<li class="items-center p-4 bg-white shadow rounded-lg border-l-4 border-yellow-500">Lalu isikan table kelas beberapa baris. Contoh isian : X PPLG.</li>
+        	<li class="items-center p-4 bg-white shadow rounded-lg border-l-4 border-yellow-500">Ciptakan table dengan nama tabel "nilai" (id, id_murid, mapel, skor)</li>
+        	<li class="items-center p-4 bg-white shadow rounded-lg border-l-4 border-yellow-500">Lalu isikan table kelas beberapa baris. Libatkan seluruh id_murid. </li>
+        	<li class="items-center p-4 bg-white shadow rounded-lg border-l-4 border-yellow-500">Cobalah cek ulang isi seluruh tabelnya dengan melalui klausa SELECT. Penting: Pastikan, untuk setiap tabel kamu menambahkan baris yang tidak berintegritas. Maksudnya, libatkan id_murid yang tidak pernah tercatat, </li>
+        	<li class="items-center p-4 bg-white shadow rounded-lg border-l-4 border-yellow-500">Bereksperimenlah menggunakan klausa berikut ini. <p class="font-mono font-bold">SELECT murid.nama AS nama_murid,nilai.skor,nilai.mapel FROM murid INNER JOIN nilai ON murid.id = nilai.id_murid;</p> Pertukarkan INNER JOIN dengan RIGHT JOIN, LEFT JOIN dan amati hasilnya. Jika perlu tambah lagi-lah baris-barisnya. Kalau tidak terlihat perbedaan, yap, tambahlah kolomnya dan isikan VALUE yang tidak berintegritas.. alias salah.</li>
+        </ol>
+
+        <!--button class="mt-6 rounded-lg bg-blue-600 px-5 py-2 text-white hover:bg-blue-700">
             Get Started
-        </button>
+        </button-->
+		<br/>
+        <p> Akhirnya, kita sampai pada Diagram Venn "keramat" yang selalu muncul pada penjelasan JOIN: 		<br/>
+        	<img src="/ngariung/didieu/assets/joins-venn-8DctMP6k.png" >
+        	Sumber: https://docs.agilebase.co.uk/docs/views/joins/types-of-join/
+        </p>
+        <p>Setiap biru adalah baris</p>
     </div>
 
 </body>
